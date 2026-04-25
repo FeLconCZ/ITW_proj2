@@ -1,0 +1,112 @@
+* {
+    outline: 1px solid red;
+}
+
+body {
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=4e5f69&c2=e95dae&gt=r&gd=dtr
+    */
+    background: #DF38EE;
+    background: radial-gradient(at left bottom, #DF38EE, #AABEDB);
+    background-repeat: no-repeat;
+}
+
+/*#region header*/
+header {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+header h1 {
+    padding-left: 2rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    font-size: 25px;
+    padding-right: 2rem;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+/*#endregion*/
+
+/*#region about*/
+#about {
+    display: block;
+    margin: auto;
+    width: 90%;
+    background-color: white;
+    border-radius: 1em;
+}
+
+#about img {
+    width: 25%;
+}
+/*#endregion*/
+
+#gridlayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "education hobbies" "projects hobbies";
+    gap: 1em;
+    width: 90%;
+    margin: auto;
+}
+
+#gridlayout section {
+    background-color: white;
+    border-radius: 1em;
+}
+
+/*#region education*/
+#education {
+    grid-area: education;
+}
+/*#endregion*/
+
+/*#region projects*/
+#projects {
+    grid-area: projects;
+}
+/*#endregion*/
+
+/*#region hobbies*/
+#hobbies {
+    grid-area: hobbies;
+}
+
+#hobbies img {
+    width: 40%;
+}
+
+#specs {
+    display: none;
+    border: 3px solid black;
+}
+
+#specs td, th {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+/*#endregion*/
+
+/*#region hobbies*/
+#contact {
+    margin: auto;
+    width: 90%;
+    background-color: white;
+}
+/*#endregion*/

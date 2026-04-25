@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>xkrnakm00</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    
+    <header>
+        <h1><a href="#">Matěj Krňák</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <article>
+                <img src="img/me/me.jpg" alt="Me">
+                <p>My name is Matěj Krňák, and I'm a student of IT at FIT BUT.</p>
+            </article>
+        </section>
+        <div id="gridlayout">
+            <section id="education">
+                <h2>Education</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+            <section id="projects">
+                    <h2>Projects</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>             
+            </section>
+            <section id="hobbies">
+                <h2>My Hobbies</h2>
+                <p>I always had many different hobbies, and they change all the time.</p>
+                <article id="pokemon">
+                    <h3>Pokémon</h3>
+                    <img src="img/hobbies/pokemon/dsl_nature.jpg" alt="Nature">
+                </article>
+                <article id="music">
+                    <h3>Music</h3>
+                    <img src="img/hobbies/music/dragonforce.jpg" alt="DragonForce">
+                </article>
+                <article id="computers">
+                    <h3>Computers and Videogames</h3>
+                    <img src="img/hobbies/computers/dsl_teardown.jpg" alt="Repair">
+                </article>
+                <article id="golfik">
+                    <h3>My Car</h3>
+                    <img src="img/hobbies/golf/golf_scenic.jpg" alt="Golf">
+                    <button onclick="toggleTable()">Show specs</button>
+                    <table id="specs">
+                        <tr>
+                            <th>Year</th>
+                            <td>2001</td>
+                        </tr>
+                        <tr>
+                            <th>Engine</th>
+                            <td>1.9 TDI</td>
+                        </tr>
+                        <tr>
+                            <th>Horsepower</th>
+                            <td>90 hp</td>
+                        </tr>
+                        <tr>
+                            <th>Variant</th>
+                            <td>3-Door Hatchback</td>
+                        </tr>
+                    </table>
+                </article>
+                <article id="sports">
+                    <h3>Sports</h3>
+                    <img src="img/hobbies/sports/spartan.jpg" alt="Spartan">
+                </article>
+            </section>
+        </div>
+        <section id="contact">
+            <ul>
+                <li>E-mail:<a href="">maty.krnak@gmail.com</a></li>
+                <li>Phone:<a href="">+420 676 767 676</a></li>
+                <li>GitHub:<a href="https://github.com/FeLconCZ">github.com/FeLconCZ</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
