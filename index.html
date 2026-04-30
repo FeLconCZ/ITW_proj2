@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xkrnakm00</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
         <h1><a href="#">Matěj Krňák</a></h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -19,6 +19,9 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+            <div class="hamburger">
+                <span class="hamicon"></span>
+            </div>
     </header>
     <main>
         <section id="about">
@@ -27,7 +30,7 @@
                 <img src="img/me/me.jpg" alt="Me">
                 <p>My name is Matěj Krňák, I'm 20 years old and I'm a student of IT at FIT BUT.</p>
                 <p>I live in Olomučany, a small village near Blansko.</p>
-
+                
             </article>
         </section>
         <div id="gridlayout">
@@ -36,7 +39,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <section id="projects">
-                    <h2>Projects</h2>
+                <h2>Projects</h2>
                     <article id="slotmachine">
                         <h3>Slot Machine</h3>
                         <img src="img/projects/slotmachine.jpg" alt="SlotMachine">
@@ -70,24 +73,27 @@
                     <img src="img/hobbies/pokemon/dsi_hunt.jpg" alt="DSI">
                     <img src="img/hobbies/pokemon/shiny_mudkip.jpg" alt="Shiny">
                 </article>
+                <div id="dashedline"></div>
                 <article id="music">
                     <h3>Music</h3>
+                    <img src="img/hobbies/music/dragonforce.jpg" alt="DragonForce">
                     <p>
                         My favorite music genre is Power Metal, and it has been for a few years now.
                         Some of the bands I regularly listen to include Gamma Ray, Helloween, DragonForce, Stratovarius, Rainbow and Iron Maiden.
                         I also played guitar for a little bit, but I rarely do now. I hope I'll return to it someday.
                     </p>
-                    <img src="img/hobbies/music/dragonforce.jpg" alt="DragonForce">
                 </article>
+                <div id="dashedline"></div>
                 <article id="repairing">
                     <h3>Repairing electronics</h3>
-                    <a>
+                    <p>
                         I sometimes like to repair consoles to flip them for profit.
                         I purchase a non-working console from ebay, usually a DS Lite, as they are cheap and easy to work on, 
                         repair it and try to make some profit.
-                    </a>
+                    </p>
                     <img src="img/hobbies/repair/dsl_teardown.jpg" alt="Repair">
                 </article>
+                <div id="dashedline"></div>
                 <article id="golfik">
                     <h3>My Car</h3>
                     <img src="img/hobbies/golf/golf_scenic.jpg" alt="Golf">
@@ -116,13 +122,14 @@
                         </tr>
                     </table>
                 </article>
+                <div id="dashedline"></div>
                 <article id="sports">
                     <h3>Sports</h3>
-                    <img src="img/hobbies/sports/spartan.jpg" alt="Spartan">
                     <p>
                         I used to run Spartan Races multiple times a year, nowdays, not so much anymore.
                         I like to play football on the weekends with my friends.
                     </p>
+                    <img src="img/hobbies/sports/spartan.jpg" alt="Spartan">
                 </article>
             </section>
         </div>
@@ -134,5 +141,7 @@
             </ul>
         </section>
     </main>
+    <script src="js/hamburger.js"></script>
+    <script src="js/toggletable.js"></script>
 </body>
 </html>

@@ -10,12 +10,21 @@ body {
     background: #DF38EE;
     background: radial-gradient(at left bottom, #DF38EE, #AABEDB);
     background-repeat: no-repeat;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
     text-decoration: none;
     color: black;
 }
+
+/*img {
+    box-shadow: 0 0 10px 0 black;
+    border: 3px solid black;
+    border-radius: 1em;
+}*/
 
 /*#region header*/
 header {
@@ -24,13 +33,24 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: white;
+    position: sticky;
+    top: 10px;
+    border-radius: 1em;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+    flex-wrap: wrap;
 }
 
 header h1 {
     padding-left: 2rem;
 }
 
-nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,9 +61,44 @@ nav ul {
     padding-right: 2rem;
 }
 
-nav a {
+.nav-links a {
     text-transform: uppercase;
     font-size: 1rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0c9";
+    font-size: 2em;
+}
+
+@media screen and (max-width: 820px) {
+    .hamburger {
+        display: block;
+        padding-right: 1em;
+        padding-top: 1.5em;
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.5em;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 /*#endregion*/
 
@@ -54,25 +109,70 @@ nav a {
     width: 90%;
     background-color: white;
     border-radius: 1em;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    column-count: 2;
+    scroll-margin-top: 110px;
 }
 
 #about img {
-    width: 25%;
+    width: 67%;
+    margin: 2em;
+}
+
+#about h2 {
+    font-size: 2em;
+    padding-left: 1em;
+    column-span: all;
+}
+
+#about p {
+    margin-right: 2em;
+    font-size: 1.3em;
 }
 /*#endregion*/
 
 #gridlayout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "education hobbies" "projects hobbies";
+    grid-template-columns: 4fr 6fr;
+    grid-template-areas: 'education hobbies' 'projects hobbies';
     gap: 1em;
     width: 90%;
     margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+    #gridlayout {
+        grid-template-areas: 'education' 'projects' 'hobbies';
+        grid-template-columns: 1fr;
+    }
+}
+
 #gridlayout section {
     background-color: white;
     border-radius: 1em;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+    scroll-margin-top: 110px;
+}
+
+#gridlayout h2 {
+    font-size: 2em;
+    padding-left: 1em;
+    column-span: all;
+}
+
+#gridlayout h3 {
+    font-size: 1.5em;
+}
+
+#dashedline {
+    width: 80%;
+    margin: auto;
+    padding-top: 1em;
+    border-bottom: 3px dashed gray;
 }
 
 /*#region education*/
@@ -96,8 +196,74 @@ nav a {
     grid-area: hobbies;
 }
 
-#hobbies img {
-    width: 40%;
+#hobbies article {
+    padding: 1em;
+}
+
+#hobbies>p {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+#pokemon {
+    display: grid;
+    grid-template-areas: 'title title title' 'text text nature' 'hunt shiny nature';
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#pokemon h3 {
+    grid-area: title;
+}
+
+#pokemon p {
+    grid-area: text;
+}
+
+#pokemon img:first-of-type {
+    grid-area: nature;
+    margin: auto;
+    width: 80%;
+}
+
+#pokemon img:nth-of-type(2) {
+    grid-area: hunt;
+    margin: auto;
+    width: 90%;
+}
+
+#pokemon img:nth-of-type(3) {
+    grid-area: shiny;
+    margin: auto;
+    width: 90%;
+}
+
+#music {
+    column-count: 2;
+}
+
+#music h3 {
+    column-span: all
+}
+
+#music img {
+    width: 100%;
+}
+
+#repairing {
+    column-count: 2;
+}
+
+#repairing h3 {
+    column-span: all
+}
+
+#repairing img {
+    width: 100%;
+}
+
+#golfik img {
+    width: 50%;
 }
 
 #specs {
@@ -110,6 +276,18 @@ nav a {
     padding: 3px;
     text-align: center;
 }
+
+#sports {
+    column-count: 2;
+}
+
+#sports h3 {
+    column-span: all;
+}
+
+#sports img {
+    width: 100%;
+}
 /*#endregion*/
 
 /*#region hobbies*/
@@ -117,5 +295,40 @@ nav a {
     margin: auto;
     width: 90%;
     background-color: white;
+    border-radius: 1em;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+    margin-top: 1em;
+    scroll-margin-top: 110px;
+}
+
+#contact ul li {
+    list-style-type: none;
+    text-align: center;
+}
+
+#contact ul li a {
+    padding-left: 1em;
+}
+
+#contact ul li:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0e0";
+    font-size: 16px;
+}
+
+#contact ul li:nth-of-type(2)::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f095";
+    font-size: 16px;
+}
+
+#contact ul li:nth-of-type(3)::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f126";
+    font-size: 16px;
 }
 /*#endregion*/
