@@ -39,6 +39,7 @@ header {
     border: 3px solid black;
     box-shadow: 3px 3px black;
     flex-wrap: wrap;
+    z-index: 3;
 }
 
 header h1 {
@@ -179,6 +180,60 @@ nav {
 #education {
     grid-area: education;
 }
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 3px;
+    background: black;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 55px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid black;
+}
+
+.content {
+    border: 3px solid black;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content .date {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 /*#endregion*/
 
 /*#region projects*/
@@ -187,7 +242,17 @@ nav {
 }
 
 #projects img {
+    width: 100%;
+}
+
+#projects article {
+    border: 5px black;
+    border-style :dashed;
     width: 80%;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 1em;
 }
 /*#endregion*/
 
@@ -290,7 +355,7 @@ nav {
 }
 /*#endregion*/
 
-/*#region hobbies*/
+/*#region contact*/
 #contact {
     margin: auto;
     width: 90%;
