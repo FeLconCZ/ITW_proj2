@@ -87,7 +87,7 @@ nav {
     font-size: 2em;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 840px) {
     .hamburger {
         display: block;
         padding-right: 1em;
