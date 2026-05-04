@@ -2,6 +2,10 @@
     outline: 1px solid red;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /*
     * Created with https://www.css-gradient.com
@@ -21,11 +25,11 @@ a {
     color: black;
 }
 
-/*img {
+img {
     box-shadow: 0 0 10px 0 black;
     border: 3px solid black;
     border-radius: 1em;
-}*/
+}
 
 /*#region header*/
 header {
@@ -115,12 +119,14 @@ nav {
     box-shadow: 3px 3px black;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding-bottom: 1em;
     column-count: 2;
+    gap: 2em;
     scroll-margin-top: 110px;
 }
 
 #about img {
-    width: 67%;
+    width: 80%;
     margin: 2em;
 }
 
@@ -131,8 +137,11 @@ nav {
 }
 
 #about p {
-    margin-right: 2em;
+    margin: auto;
+    width: 80%;
     font-size: 1.3em;
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 /*#endregion*/
 
@@ -270,6 +279,11 @@ nav {
     text-align: center;
     width: 80%;
     margin: auto;
+    font-style: italic;
+}
+
+#hobbies p {
+    text-align: justify;
 }
 
 #pokemon {
@@ -436,6 +450,9 @@ footer img {
     height: max-content;
     margin: auto;
     padding: 1em;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
 }
 
 footer img:first-of-type {
