@@ -1,11 +1,20 @@
+/*
+    CSS document for my 2nd ITW project
+    Created by Matěj Krňák, xkrnakm00
+    The document has been divided by regions
+*/
+
+/* debug outline for all elements */
 /** {
     outline: 1px solid red;
 }*/
 
+/* enable smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* global page styling */
 body {
     /*
     * Created with https://www.css-gradient.com
@@ -20,14 +29,22 @@ body {
     font-family: Ubuntu, sans-serif;
 }
 
+/* default link color */
 a {
     color: black;
 }
 
+/* remove underline from all links except contact section */
 a:not(#contact a) {
     text-decoration: none;
 }
 
+/* link hover color */
+a:hover {
+    color: blueviolet;
+}
+
+/* default image styling */
 img {
     box-shadow: 0 0 10px 0 black;
     border: 3px solid black;
@@ -35,6 +52,8 @@ img {
 }
 
 /*#region header*/
+
+/* header container styling */
 header {
     margin: auto;
     width: 90%;
@@ -50,15 +69,18 @@ header {
     z-index: 3;
 }
 
+/* main title styling */
 header h1 {
     padding-left: 2rem;
 }
 
+/* navigation container */
 nav {
     display: flex;
     justify-content: space-between;
 }
 
+/* navigation links layout */
 .nav-links {
     display: flex;
     flex-direction: row;
@@ -70,16 +92,19 @@ nav {
     padding-right: 2rem;
 }
 
+/* navigation link text styling */
 .nav-links a {
     text-transform: uppercase;
     font-size: 1rem;
 }
 
+/* hamburger menu */
 .hamburger {
     display: none;
     cursor: pointer;
 }
 
+/* hamburger icon symbol */
 .hamburger::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -87,12 +112,12 @@ nav {
     font-size: 2em;
 }
 
+/* responsive navigation for smaller screens */
 @media screen and (max-width: 840px) {
     .hamburger {
         display: block;
         padding-right: 1em;
         padding-top: 1.5em;
-        
     }
 
     .nav-links {
@@ -109,9 +134,12 @@ nav {
         display: flex;
     }
 }
+
 /*#endregion*/
 
 /*#region about*/
+
+/* about section container */
 #about {
     display: block;
     margin: auto;
@@ -128,17 +156,29 @@ nav {
     scroll-margin-top: 110px;
 }
 
+/* about section image styling */
 #about img {
     width: 80%;
     margin: 2em;
 }
 
+/* about section title */
 #about h2 {
     font-size: 2em;
     padding-left: 1em;
     column-span: all;
 }
 
+/* info icon before first h2 */
+#about h2:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f05a";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* about section text styling */
 #about p {
     margin: auto;
     width: 80%;
@@ -146,8 +186,10 @@ nav {
     text-align: center;
     padding-bottom: 0.5em;
 }
+
 /*#endregion*/
 
+/* grid layout for education, projects, hobbies */
 #gridlayout {
     display: grid;
     grid-template-columns: 4fr 6fr;
@@ -157,6 +199,7 @@ nav {
     margin: auto;
 }
 
+/* responsive grid layout */
 @media screen and (max-width: 768px) {
     #gridlayout {
         grid-template-areas: 'education' 'projects' 'hobbies';
@@ -164,6 +207,7 @@ nav {
     }
 }
 
+/* styling for all grid sections */
 #gridlayout section {
     background-color: white;
     border-radius: 1em;
@@ -172,16 +216,19 @@ nav {
     scroll-margin-top: 110px;
 }
 
+/* section titles */
 #gridlayout h2 {
     font-size: 2em;
     padding-left: 1em;
     column-span: all;
 }
 
+/* subsection titles */
 #gridlayout h3 {
     font-size: 1.5em;
 }
 
+/* dashed separator line */
 .dashedline {
     width: 80%;
     margin: auto;
@@ -190,10 +237,22 @@ nav {
 }
 
 /*#region education*/
+
+/* education section grid area */
 #education {
     grid-area: education;
 }
 
+/* book icon before title */
+#education h2:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f518";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* vertical timeline container */
 .timeline {
     list-style: none;
     padding: 0;
@@ -202,6 +261,7 @@ nav {
     margin: auto;
 }
 
+/* vertical line of timeline */
 .timeline::before {
     content: '';
     position: absolute;
@@ -212,12 +272,14 @@ nav {
     background: black;
 }
 
+/* timeline item */
 .timeline li {
     position: relative;
     margin-bottom: 30px;
     padding-left: 50px;
 }
 
+/* timeline dot */
 .timeline li::before {
     content: '';
     position: absolute;
@@ -230,6 +292,7 @@ nav {
     border: 3px solid black;
 }
 
+/* timeline content box */
 .content {
     border: 3px solid black;
     border-radius: 1em;
@@ -239,45 +302,75 @@ nav {
     text-align: center;
 }
 
+/* timeline image */
 .content img {
     width: 100%;
 }
 
+/* timeline date text */
 .content .date {
     font-size: 1.5em;
     font-weight: bold;
 }
+
 /*#endregion*/
 
 /*#region projects*/
+
+/* projects section grid area */
 #projects {
     grid-area: projects;
 }
 
+/* code icon before title */
+#projects h2:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f121";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* project images */
 #projects img {
     width: 100%;
 }
 
+/* project article styling */
 #projects article {
     border: 5px black;
-    border-style :dashed;
+    border-style: dashed;
     width: 80%;
     margin: auto;
     margin-bottom: 1em;
     text-align: center;
     padding: 1em;
 }
+
 /*#endregion*/
 
 /*#region hobbies*/
+
+/* hobbies section grid area */
 #hobbies {
     grid-area: hobbies;
 }
 
+/* smile icon before title */
+#hobbies h2:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f118";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* hobbies article spacing */
 #hobbies article {
     padding: 1em;
 }
 
+/* hobbies intro text */
 #hobbies>p {
     text-align: center;
     width: 80%;
@@ -285,109 +378,180 @@ nav {
     font-style: italic;
 }
 
+/* hobbies paragraph formatting */
 #hobbies p {
     text-align: justify;
 }
 
+/* pokemon section grid layout */
 #pokemon {
     display: grid;
     grid-template-areas: 'title title title' 'text text nature' 'hunt shiny nature';
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* pokemon section title */
 #pokemon h3 {
     grid-area: title;
 }
 
+/* controller icon before title */
+#pokemon h3:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f11b";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* pokemon text */
 #pokemon p {
     grid-area: text;
 }
 
+/* pokemon nature image */
 #pokemon img:first-of-type {
     grid-area: nature;
     margin: auto;
     width: 80%;
 }
 
+/* pokemon hunt image */
 #pokemon img:nth-of-type(2) {
     grid-area: hunt;
     margin: auto;
     width: 90%;
 }
 
+/* pokemon shiny image */
 #pokemon img:nth-of-type(3) {
     grid-area: shiny;
     margin: auto;
     width: 90%;
 }
 
+/* music section columns */
 #music {
     column-count: 2;
 }
 
+/* music title */
 #music h3 {
     column-span: all
 }
 
+/* music icon */
+#music h3:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f025";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* music images */
 #music img {
     width: 100%;
 }
 
+/* repairing section columns */
 #repairing {
     column-count: 2;
 }
 
+/* repairing title */
 #repairing h3 {
     column-span: all
 }
 
+/* wrench icon */
+#repairing h3:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0ad";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* repairing images */
 #repairing img {
     width: 100%;
 }
 
+/* car icon for golfik */
+#golfik h3:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f1b9";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* golfik images */
 #golfik img {
     width: 100%;
 }
 
+/* golfik columns */
 #golfik #columns {
     column-count: 2;
 }
 
+/* golfik button styling */
 #golfik button {
     display: block;
     margin: auto;
     margin-bottom: 1em;
 }
 
+/* golfik table centering */
 #golfik table {
     margin: auto;
 }
 
+/* hidden specs table */
 #specs {
     display: none;
     border: 3px solid black;
 }
 
-#specs td, th {
+/* table cell styling */
+#specs td,
+th {
     border: 1px solid black;
     padding: 3px;
     text-align: center;
 }
 
+/* sports section columns */
 #sports {
     column-count: 2;
 }
 
+/* sports title */
 #sports h3 {
     column-span: all;
 }
 
+/* sports icon */
+#sports h3:first-of-type::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f70c";
+    font-size: inherit;
+    padding-right: 0.3em;
+}
+
+/* sports images */
 #sports img {
     width: 100%;
 }
+
 /*#endregion*/
 
 /*#region contact*/
+
+/* contact section container */
 #contact {
     margin: auto;
     width: 90%;
@@ -400,42 +564,54 @@ nav {
     scroll-margin-top: 110px;
 }
 
+/* hide contact title */
 #contact h2 {
     display: none;
 }
 
+/* contact list items */
 #contact ul li {
     list-style-type: none;
     text-align: center;
 }
 
+/* contact links spacing */
 #contact ul li a {
     padding-left: 1em;
 }
 
+/* email icon */
 #contact ul li:first-of-type::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f0e0";
     font-size: 16px;
+    padding-right: 0.3em;
 }
 
+/* phone icon */
 #contact ul li:nth-of-type(2)::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f095";
     font-size: 16px;
+    padding-right: 0.3em;
 }
 
+/* code icon */
 #contact ul li:nth-of-type(3)::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f126";
     font-size: 16px;
+    padding-right: 0.3em;
 }
+
 /*#endregion*/
 
 /*#region footer*/
+
+/* footer container */
 footer {
     background-color: black;
     color: white;
@@ -448,10 +624,12 @@ footer {
     flex-direction: row;
 }
 
+/* footer text centering */
 footer #text {
     margin: auto;
 }
 
+/* footer images */
 footer img {
     width: 5%;
     height: max-content;
@@ -462,7 +640,9 @@ footer img {
     border-radius: 0;
 }
 
+/* first footer image width */
 footer img:first-of-type {
     width: 10%;
 }
+
 /*#endregion*/

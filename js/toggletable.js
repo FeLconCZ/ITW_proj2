@@ -1,3 +1,4 @@
+// toggles the specs table, also changes the text on the button
 function toggleTable() {
             const table = document.getElementById("specs");
             const button = document.querySelector("button");
